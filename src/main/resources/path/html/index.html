@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<!--Here we have the code that creates our website that has a header, body, and wrapper.
+The code also includes some CSS styles for the site.
+The first line of the HTML is which tells the browser to start reading from this point on in the document.
+
+
+The next line is which contains all of the style information for this page.
+
+There are two lines with CSS styles: one for body and one for wrapper.
+Body has box-sizing set to border-box so that it can take up as much space as possible while still fitting within its container (the browser window).
+Wrapper uses margin: 1em; to make sure there's enough space between each element inside it without having any extra padding or margins outside of it.
+Font-family is "Pangolin", sans-serif; because Pangolin font was used in Microsoft Edge when designing this website and sans serif fonts are easier to read at small sizes than other fonts like cursive or handwriting fonts would be.
+Background color is azure because blue colors look good against light backgrounds like white does against dark backgrounds like black does but they're not too bright either so they don't distract from what's being displayed on screen by making them too hard to see or
+The code is a styling snippet that sets the body of the document to have a border-box box model, with a 1em margin and font size of "1" for all text.
+It also sets the background color to azure, and the text color to dimgray.
+
+The .wrapper selector creates an element with padding of 20px on each side, 33% width, and 10px radius rounded corners.
+The .wrapper label selector creates an inline-block display for elements with a display: block property in order to create two lines of text when displayed as inline-block.
+The .wrapper button[type="button"] selector creates an element with 100% width, blue background color, white foreground color (text), 4px padding on-->
+
+<html>
+    <head>
+        <style>
+            body{
+                box-sizing: border-box;
+                margin: 1em;
+                font-family: "Pangolin", sans-serif;
+                background-color:azure;
+                color: dimgray;
+                width: 90%;
+                padding: 1em;
+                display: inline-block;
+            }
+
+            .wrapper{
+                padding: 20px;
+                width: 33%;
+                border-radius: 10px;
+                background-color: lightblue;
+            }
+
+            .wrapper label{
+                display: inline;
+                display: block;
+                margin: 0.5em;
+            }
+
+            .wrapper label input{
+                font-size: 1;
+                padding: 0.5em;
+            }
+
+            .wrapper button[type="button"]{
+                width: 100%;
+                background-color: blue;
+                color: white;
+                padding: 4px;
+                margin: 2px;
+                border: none;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+<head>
+    <title>Online Customer Servcie</title>
+        
+</head>
+
+<body>
+    
+    <br />
+    <div id="app">Welcome To Our Online Banking Customer Service</div>
+    <h1>Enter Customer Details</h1>
+
+    <div class="wrapper">
+
+        <script>
+
+            <!--establish connection to database-->
+
+            const mysql = require('mysql');
+
+            const connection = mysql.createConnection({
+
+            host : '127.0.01',
+            user : 'Fikile Gqibitole',
+            password : 'password',
+            database : 'NEWDB'
+
+            });
+
+            connection.connect((err) => {
+                 if (err) {
+                    console.error('Error connecting to database:',err);
+                    return;
+                 }
+
+                 console.log('Connected to database!');
+
+                 });
+
+
+        </script>
+
+       <!-- <form  id="form">
+
+        <label id="firstNameField">
+            <input type="text" name="firstNameField" placeholder="First Name"  required />
+        </label>
+         
+        
+        <label id="LastNameField">
+            <input type="text" name="LastNameField" placeholder="Last Name"  required />
+        </label>
+
+        
+        <label id="DateOfBirthField">
+            <input type="date" name="DateOfBirthField" placeholder="Date Of Birth"  required />
+        </label>
+
+        <a href="list.html">
+            <button type="button" id="submit_button" name="Submit">Submit</button>
+        </a>
+
+    </form>-->
+
+</div>
+
+</body>
+</html>
+
+
+
